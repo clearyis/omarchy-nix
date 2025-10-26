@@ -71,7 +71,7 @@ lib: {
         "SUPER, W, exec, $browser"
         "SUPER, M, exec, $music"
         "SUPER, N, exec, $terminal -e nvim +VimwikiIndex"
-        "SUPER, SHIFT, R, exec, $terminal -e btop"
+        "SUPER SHIFT, R, exec, $terminal -e btop"
         "SUPER, D, exec, tofi-drun"
         "SUPER, S, exec, $messenger"
         "SUPER, slash, exec, $passwordManager"
