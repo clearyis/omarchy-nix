@@ -50,6 +50,7 @@ in
           "bluetooth"
           "network"
           "wireplumber"
+	  "backlight"
           "memory"
           "cpu"
           "temperature"
@@ -197,6 +198,18 @@ in
           tooltip-format = "Playing at {volume}%";
           on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
           max-volume = 150; # Optional: allow volume over 100%
+        };
+	backlight = {
+	  device = "intel_backlight";
+	  format = "{icon}   ";
+	  on-click = "hyprsunset -t 4500";
+	  on-click-right = "pkill hyprsunset";
+	  tooltip-format = "{percent}%";
+	  format-icons = [
+	    "󰃞"
+	    "󰃟"
+	    "󰃠"
+	  ];
         };
 	"group/tray-expander" = {
 	  orientation = "inherit";
