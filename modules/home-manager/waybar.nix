@@ -82,11 +82,11 @@ in
         };
         cpu = {
           interval = 5;
-          format = "󰍛";
+          format = "󰍛 ";
           on-click = "ghostty -e btop";
         };
         memory = {
-          format = "  ";
+          format = "   ";
           tooltip-format = "{percentage}%\n{used:0.1f}GiB";
           on-click = "alacritty -e btop";
         };
@@ -158,7 +158,7 @@ in
         temperature = {
           hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input";
           critical-threshold = 95;
-          format = "{icon} ";
+          format = "{icon}  ";
           format-icons = [
 	    ""
 	    ""
@@ -218,7 +218,7 @@ in
           spacing = 17;
         };
         power-profiles-daemon = {
-          format = "{icon}";
+          format = "{icon} ";
           tooltip-format = "Power profile: {profile}";
           tooltip = true;
           format-icons = {
