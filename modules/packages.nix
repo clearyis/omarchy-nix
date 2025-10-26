@@ -49,12 +49,13 @@ let
       tofi
 
       # GUIs
-      chromium
-      firefox
       brave
-      vlc
-      signal-desktop
+      chromium
       easyeffects
+      firefox
+      signal-desktop
+      thunderbird
+      vlc
 
       # Development tools
       github-desktop
