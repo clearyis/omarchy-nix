@@ -158,7 +158,7 @@ in
         temperature = {
           hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input";
           critical-threshold = 95;
-          format = "{icon}  ";
+          format = "{icon} ";
           format-icons = [
 	    ""
 	    ""

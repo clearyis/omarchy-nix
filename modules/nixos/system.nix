@@ -39,6 +39,9 @@ in
     networkmanager.enable = true;
   };
 
+  # Power Profiles Daemon
+  services.power-profiles-daemon.enable = true;
+
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-emoji
