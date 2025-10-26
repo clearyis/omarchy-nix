@@ -15,6 +15,7 @@ in
     ./input.nix
     ./looknfeel.nix
     ./windows.nix
+    ./monitors.nix
   ];
   wayland.windowManager.hyprland.settings = {
     # Default applications
