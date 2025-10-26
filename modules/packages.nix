@@ -49,9 +49,13 @@ let
 
       # GUIs
       chromium
-      obsidian
+      firefox
+      brave
       vlc
       signal-desktop
+
+      # Games
+      steam
 
       # Development tools
       github-desktop
@@ -63,7 +67,6 @@ let
     ]
     ++ lib.optionals (pkgs.system == "x86_64-linux") [
       typora
-      dropbox
       spotify
     ];
 
