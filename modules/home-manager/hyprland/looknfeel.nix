@@ -16,8 +16,8 @@ in
 {
   wayland.windowManager.hyprland.settings = {
     general = {
-      gaps_in = 5;
-      gaps_out = 10;
+      gaps_in = 0;
+      gaps_out = 0;
 
       border_size = 2;
 
@@ -32,7 +32,7 @@ in
     };
 
     decoration = {
-      rounding = 4;
+      rounding = 0;
 
       shadow = {
         enabled = false;
@@ -44,15 +44,15 @@ in
 
       blur = {
         enabled = true;
-        size = 5;
-        passes = 2;
+        size = 3;
+        passes = 1;
 
         vibrancy = 0.1696;
       };
     };
 
     animations = {
-      enabled = true; # yes, please :)
+      enabled = no; # yes, please :)
 
       bezier = [
         "easeOutQuint,0.23,1,0.32,1"
@@ -93,6 +93,7 @@ in
     misc = {
       disable_hyprland_logo = true;
       disable_splash_rendering = true;
+      focus_on_active = true;
     };
   };
 }
