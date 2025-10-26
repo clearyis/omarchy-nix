@@ -21,12 +21,19 @@
 
       touchpad = {
         natural_scroll = false;
+	clickfinger_behavior = true;
       };
     };
 
     # https://wiki.hyprland.org/Configuring/Variables/#gestures
-    gestures = lib.mkDefault {
-      workspace_swipe = false;
-    };
+        gesture = [
+        "3, horizontal, workspace"
+	"4, swipe, resize"
+	"3, pinchout, float, float"
+	"4, pinchout, float, float"
+	"3, pinchin, float, tile"
+	"4, pinchin, float, tile"
+	"3, swipe, mod: SUPER, move"
+        ];
   };
 }
