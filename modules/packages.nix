@@ -46,6 +46,7 @@ let
       btop
       powertop
       fastfetch
+      tofi
 
       # GUIs
       chromium
@@ -54,9 +55,6 @@ let
       vlc
       signal-desktop
       easyeffects
-
-      # Games
-      steam
 
       # Development tools
       github-desktop
