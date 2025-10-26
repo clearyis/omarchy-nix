@@ -45,12 +45,14 @@ in
           "clock"
         ];
         modules-right = [
-          # "custom/dropbox"
           "tray"
+          "idle_inhibitor"
           "bluetooth"
           "network"
           "wireplumber"
+          "memory"
           "cpu"
+          "temperature"
           "power-profiles-daemon"
           "battery"
         ];
@@ -78,11 +80,23 @@ in
             "5" = [ ];
           };
         };
+        idle_inhibitor = {
+          format = "{icon}",
+          format-icons = {
+            activated = "   ",
+            deactivated = "   "
+          } 
+        },
         cpu = {
           interval = 5;
           format = "󰍛";
           on-click = "ghostty -e btop";
         };
+        memory = {
+          format = "  ",
+          tooltip-format = "{percentage}%\n{used:0.1f}GiB",
+          on-click = "alacritty -e btop"
+        },
         clock = {
           format = "{:%A %I:%M %p}";
           format-alt = "{:%d %B W%V %Y}";
@@ -112,7 +126,7 @@ in
           format = "{capacity}% {icon}";
           format-discharging = "{icon}";
           format-charging = "{icon}";
-          format-plugged = "";
+          format-plugged= "",
           format-icons = {
             charging = [
               "󰢜"
@@ -127,7 +141,7 @@ in
               "󰂅"
             ];
             default = [
-              "󰁺"
+              "󰂃"
               "󰁻"
               "󰁼"
               "󰁽"
@@ -147,6 +161,15 @@ in
             critical = 10;
           };
         };
+
+        temperature = {
+          hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input",
+          critical-threshold = 95,
+          format = " {icon} ",
+          format-icons = ["", "", "", "", "", "", "", "", "", "", "", ""],
+          interval = 5,
+          on-click = "alacritty -e btop"
+        },
         bluetooth = {
           format = "󰂯";
           format-disabled = "󰂲";
