@@ -81,22 +81,22 @@ in
           };
         };
         idle_inhibitor = {
-          format = "{icon}",
-          format-icons = {
+          format = "{icon}";
+          format-icons = [
             activated = "   ",
             deactivated = "   "
-          } 
-        },
+          ]; 
+        };
         cpu = {
           interval = 5;
           format = "󰍛";
           on-click = "ghostty -e btop";
         };
         memory = {
-          format = "  ",
-          tooltip-format = "{percentage}%\n{used:0.1f}GiB",
-          on-click = "alacritty -e btop"
-        },
+          format = "  ";
+          tooltip-format = "{percentage}%\n{used:0.1f}GiB";
+          on-click = "alacritty -e btop";
+        };
         clock = {
           format = "{:%A %I:%M %p}";
           format-alt = "{:%d %B W%V %Y}";
@@ -163,13 +163,13 @@ in
         };
 
         temperature = {
-          hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input",
-          critical-threshold = 95,
-          format = " {icon} ",
-          format-icons = ["", "", "", "", "", "", "", "", "", "", "", ""],
-          interval = 5,
-          on-click = "alacritty -e btop"
-        },
+          hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input";
+          critical-threshold = 95;
+          format = " {icon} ";
+          format-icons = ["", "", "", "", "", "", "", "", "", "", "", ""];
+          interval = 5;
+          on-click = "alacritty -e btop";
+        };
         bluetooth = {
           format = "󰂯";
           format-disabled = "󰂲";

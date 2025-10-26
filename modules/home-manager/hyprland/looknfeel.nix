@@ -52,7 +52,7 @@ in
     };
 
     animations = {
-      enabled = no; # yes, please :)
+      enabled = false; # yes, please :)
 
       bezier = [
         "easeOutQuint,0.23,1,0.32,1"
@@ -93,7 +93,6 @@ in
     misc = {
       disable_hyprland_logo = true;
       disable_splash_rendering = true;
-      focus_on_active = true;
     };
   };
 }
