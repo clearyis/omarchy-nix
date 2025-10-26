@@ -53,6 +53,7 @@ let
       brave
       vlc
       signal-desktop
+      easyeffects
 
       # Games
       steam
