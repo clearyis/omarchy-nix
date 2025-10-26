@@ -45,7 +45,7 @@ in
           "clock"
         ];
         modules-right = [
-          "tray"
+          "group/tray-expander"
           "idle_inhibitor"
           "bluetooth"
           "network"
@@ -70,22 +70,15 @@ in
             "7" = "7";
             "8" = "8";
             "9" = "9";
-            active = "󱓻";
-          };
-          persistent-workspaces = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
-            "5" = [ ];
+            "10" = "10";
           };
         };
         idle_inhibitor = {
           format = "{icon}";
-          format-icons = [
-            "activated" = "   ";
-            "deactivated" = "   ";
-          ]; 
+          format-icons = {
+            activated = "   ";
+            deactivated = "   ";
+          }; 
         };
         cpu = {
           interval = 5;
@@ -93,7 +86,7 @@ in
           on-click = "ghostty -e btop";
         };
         memory = {
-          format = "  ";
+          format = "  ";
           tooltip-format = "{percentage}%\n{used:0.1f}GiB";
           on-click = "alacritty -e btop";
         };
@@ -123,10 +116,10 @@ in
         };
         battery = {
           interval = 5;
-          format = "{capacity}% {icon}";
-          format-discharging = "{icon}";
-          format-charging = "{icon}";
-          format-plugged= "",
+          format = "{capacity}% {icon} ";
+          format-discharging = "{icon} ";
+          format-charging = "{icon} ";
+          format-plugged= " ";
           format-icons = {
             charging = [
               "󰢜"
@@ -165,8 +158,21 @@ in
         temperature = {
           hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input";
           critical-threshold = 95;
-          format = " {icon} ";
-          format-icons = ["", "", "", "", "", "", "", "", "", "", "", ""];
+          format = "{icon}  ";
+          format-icons = [
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	    ""
+	  ];
           interval = 5;
           on-click = "alacritty -e btop";
         };
@@ -179,7 +185,12 @@ in
         };
         wireplumber = {
           # Changed from "pulseaudio"
-          "format" = "";
+          format = " {icon} ";
+	  format-icons = [
+	     ""
+	     ""
+	     ""
+	   ];
           format-muted = "󰝟";
           scroll-step = 5;
           on-click = "pavucontrol";
@@ -187,8 +198,24 @@ in
           on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
           max-volume = 150; # Optional: allow volume over 100%
         };
+	"group/tray-expander" = {
+	  orientation = "inherit";
+          drawer = {
+            transition-duration = 600;
+            children-class = "tray-group-item";
+          };
+          modules = [
+	    "custom/expand-icon"
+	    "tray"
+	  ];
+          };
+          "custom/expand-icon" = {
+            format = "   ";
+            tooltip = false;
+          };
         tray = {
-          spacing = 13;
+	  icon-size = 12;
+          spacing = 17;
         };
         power-profiles-daemon = {
           format = "{icon}";
