@@ -20,7 +20,7 @@
       "fullscreen, class:^(com.libretro.RetroArch)$"
 
       # Just dash of transparency
-      "opacity 0.97 0.9, class:.*"
+      "opacity 1 0.9, class:.*"
       #"opacity 1 1, class:.*"
       # Normal chrome Youtube tabs
       "opacity 1 1, class:^(chromium|google-chrome|google-chrome-unstable)$, title:.*Youtube.*"

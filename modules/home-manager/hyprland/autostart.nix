@@ -12,7 +12,7 @@
       "hyprsunset"
       "systemctl --user start hyprpolkitagent"
       "wl-clip-persist --clipboard regular & clipse -listen"
-      "easyeffects"
+      "easyeffects --gapplication-service"
 
       # "dropbox-cli start"  # Uncomment to run Dropbox
     ];
