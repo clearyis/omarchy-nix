@@ -43,6 +43,7 @@ in
         ];
         modules-center = [
           "clock"
+          "battery"
         ];
         modules-right = [
           "group/tray-expander"
@@ -53,9 +54,8 @@ in
 	  "backlight"
           "memory"
           "cpu"
-          "temperature"
           "power-profiles-daemon"
-          "battery"
+          "temperature"
         ];
         "hyprland/workspaces" = {
           on-click = "activate";
@@ -118,13 +118,13 @@ in
         battery = {
           interval = 5;
           #format = "{capacity}% {icon} ";
-          format = "{power:>1.0f}W↓ {capacity}% ";
+          format = "{power:>1.0f}W↓ {capacity}%";
           #format-discharging = "{icon} {capacity}% ";
-          format-discharging = "{power:>1.0f}W↓ {capacity}% ";
-          format-charging = "{power:>1.0f}W↓ {capacity}% ";
+          format-discharging = "{power:>1.0f}W↓ {capacity}%";
+          format-charging = "{power:>1.0f}W↓ {capacity}%";
           #format-charging = "{icon} {capacity}% ";
           #format-plugged= " ";
-          format-plugged = "{power:>1.0f}W↓ {capacity}% ";
+          format-plugged = "{power:>1.0f}W↓ {capacity}%";
           format-icons = {
             charging = [
               "󰢜"

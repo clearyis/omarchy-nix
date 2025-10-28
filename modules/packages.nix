@@ -46,17 +46,8 @@ let
       btop
       powertop
       fastfetch
-      tofi
 
       # GUIs
-      brave
-      chromium
-      easyeffects
-      firefox
-      mullvad-browser
-      mullvad-vpn
-      signal-desktop
-      thunderbird
       vlc
 
       # Development tools
@@ -69,7 +60,6 @@ let
     ]
     ++ lib.optionals (pkgs.system == "x86_64-linux") [
       typora
-      spotify
     ];
 
   # Only allow excluding discretionary packages to prevent breaking the system
