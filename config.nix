@@ -72,7 +72,7 @@ lib: {
         "SUPER, M, exec, $music"
         "SUPER, N, exec, $terminal -e nvim +VimwikiIndex"
         "SUPER SHIFT, R, exec, $terminal -e btop"
-        "SUPER, D, exec, tofi-run"
+        "SUPER, D, exec, tofi-run | xargs hyprctl dispatch exec --"
         "SUPER, S, exec, $messenger"
         "SUPER, slash, exec, $passwordManager"
       ];
