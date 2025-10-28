@@ -117,10 +117,14 @@ in
         };
         battery = {
           interval = 5;
-          format = "{capacity}% {icon} ";
-          format-discharging = "{icon} ";
-          format-charging = "{icon} ";
-          format-plugged= " ";
+          #format = "{capacity}% {icon} ";
+          format = "{power:>1.0f}W↓ {capacity}% ";
+          #format-discharging = "{icon} {capacity}% ";
+          format-discharging = "{power:>1.0f}W↓ {capacity}% ";
+          format-charging = "{power:>1.0f}W↓ {capacity}% ";
+          #format-charging = "{icon} {capacity}% ";
+          #format-plugged= " ";
+          format-plugged = "{power:>1.0f}W↓ {capacity}% ";
           format-icons = {
             charging = [
               "󰢜"
@@ -148,8 +152,8 @@ in
             ];
           };
           format-full = "Charged ";
-          tooltip-format-discharging = "{power:>1.0f}W↓ {capacity}%";
-          tooltip-format-charging = "{power:>1.0f}W↑ {capacity}%";
+          #tooltip-format-discharging = "{power:>1.0f}W↓ {capacity}%";
+          #tooltip-format-charging = "{power:>1.0f}W↑ {capacity}%";
           states = {
             warning = 20;
             critical = 10;

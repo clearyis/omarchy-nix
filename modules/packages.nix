@@ -53,6 +53,8 @@ let
       chromium
       easyeffects
       firefox
+      mullvad-browser
+      mullvad-vpn
       signal-desktop
       thunderbird
       vlc

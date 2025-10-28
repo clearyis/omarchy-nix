@@ -9,7 +9,7 @@
       # "hypridle & mako & waybar & fcitx5"
       # "waybar"
       # "swaybg -i ~/.config/omarchy/current/background -m fill"
-      "hyprsunset"
+      "hyprsunset -t 4500"
       "systemctl --user start hyprpolkitagent"
       "wl-clip-persist --clipboard regular & clipse -listen"
       "easyeffects --gapplication-service"
