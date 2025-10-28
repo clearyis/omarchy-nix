@@ -121,10 +121,10 @@ in
           format = "{power:>1.0f}W↓ {capacity}%";
           #format-discharging = "{icon} {capacity}% ";
           format-discharging = "{power:>1.0f}W↓ {capacity}%";
-          format-charging = "{power:>1.0f}W↓ {capacity}%";
+          format-charging = "{power:>1.0f}W↑ {capacity}%";
           #format-charging = "{icon} {capacity}% ";
           #format-plugged= " ";
-          format-plugged = "{power:>1.0f}W↓ {capacity}%";
+          format-plugged = "{power:>1.0f}W↑ {capacity}%";
           format-icons = {
             charging = [
               "󰢜"
