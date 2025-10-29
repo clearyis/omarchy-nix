@@ -74,6 +74,7 @@ lib: {
         "SUPER SHIFT, R, exec, $terminal -e btop"
         "SUPER, D, exec, tofi-run | xargs hyprctl dispatch exec --"
         "SUPER, S, exec, $messenger"
+        "SUPER, E, exec, thunderbird"
         "SUPER, slash, exec, $passwordManager"
       ];
     };

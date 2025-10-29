@@ -97,7 +97,7 @@ in
       graph_symbol_net = "default";
       graph_symbol_proc = "default";
       shown_boxes = "cpu mem net proc";
-      update_ms = 2000;
+      update_ms = 1000;
       proc_sorting = "cpu lazy";
       proc_reversed = false;
       proc_tree = false;
@@ -115,7 +115,7 @@ in
       cpu_bottom = false;
       show_uptime = true;
       check_temp = true;
-      cpu_sensor = "Auto";
+      cpu_sensor = "k10temp/Tctl";
       show_coretemp = true;
       cpu_core_map = "";
       temp_scale = "celsius";
