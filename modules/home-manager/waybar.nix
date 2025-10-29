@@ -84,12 +84,12 @@ in
         cpu = {
           interval = 5;
           format = "󰍛 ";
-          on-click = "ghostty -e btop";
+          on-click = "ghostty --command='btop'";
         };
         memory = {
           format = "   ";
           tooltip-format = "{percentage}%\n{used:0.1f}GiB";
-          on-click = "alacritty -e btop";
+          on-click = "ghostty --command='btop'";
         };
         clock = {
           format = "{:%A %I:%M %p}";
@@ -113,7 +113,7 @@ in
           tooltip-format-disconnected = "Disconnected";
           interval = 3;
           nospacing = 1;
-          on-click = "ghostty -e nmtui";
+          on-click = "ghostty --command='nmtui'";
         };
         battery = {
           interval = 5;
@@ -179,7 +179,7 @@ in
 	    ""
 	  ];
           interval = 5;
-          on-click = "alacritty -e btop";
+          on-click = "ghostty --command='btop'";
         };
         bluetooth = {
           format = "󰂯";
