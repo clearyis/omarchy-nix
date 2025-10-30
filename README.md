@@ -9,6 +9,8 @@ Primary changes are:
 
 (my [nix setup](https://github.com/clearyis/nix) for reference) 
 
+Original [omarchy-nix](https://github.com/henrysipp/omarchy-nix) README below:
+
 # Omarchy Nix
 
 Omarchy-nix (Omanix?) is an opinionated NixOS flake to help you get started as fast as possible with NixOS and Hyprland. It is primarily a reimplementation of [DHH's Omarchy](https://github.com/basecamp/omarchy) project - an opinionated Arch/Hyprland setup for modern web development.
