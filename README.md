@@ -1,7 +1,5 @@
 # clearyis Fork of Omarchy-Nix
 
-A more minimal omarchy-nix.
-
 Primary changes are:
 - slimmer package list
 - no animations or gaps (sorry I like fast)
