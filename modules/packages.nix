@@ -70,5 +70,6 @@ in
   systemPackages = allSystemPackages;
 
   homePackages = with pkgs; [
+    grml-zsh-config
   ];
 }
