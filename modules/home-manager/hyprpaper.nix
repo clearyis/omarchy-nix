@@ -8,7 +8,7 @@ let
 in
 {
   home.file = {
-    "Pictures/Wallpapers" = {
+    "box/pix/wallpaper" = {
       source = ../../config/themes/wallpapers;
       recursive = true;
     };
