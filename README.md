@@ -1,12 +1,13 @@
 # clearyis Fork of Omarchy-Nix
 
-The purpose of this fork is to create my ideal version of omarchy-nix.
+A more minimal omarchy-nix.
 
 Primary changes are:
-- slimmer package list (no webapps)
-- no animations or gap (sorry I like fast)
+- slimmer package list
+- no animations or gaps (sorry I like fast)
 - oh-my-zsh -> grml-zsh
 - wofi -> tofi
+- default keybind changes (mostly inspired by LARBS) 
 
 # Omarchy Nix
 
