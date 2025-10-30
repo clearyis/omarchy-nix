@@ -33,7 +33,7 @@ let
       let
         selected_wallpaper = builtins.elemAt (wallpapers.${cfg.theme}) 0;
       in
-      "~/Pictures/Wallpapers/${selected_wallpaper}";
+      "~/box/pix/wallpapers/${selected_wallpaper}";
 in
 {
   inherit wallpaper_path;
