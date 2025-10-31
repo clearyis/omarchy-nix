@@ -71,5 +71,6 @@ in
 
   homePackages = with pkgs; [
     grml-zsh-config
+    nextcloud-client
   ];
 }

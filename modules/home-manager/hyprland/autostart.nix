@@ -13,6 +13,7 @@
       "systemctl --user start hyprpolkitagent"
       "wl-clip-persist --clipboard regular & clipse -listen"
       "easyeffects --gapplication-service"
+      "nextcloud"
 
       # "dropbox-cli start"  # Uncomment to run Dropbox
     ];
