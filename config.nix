@@ -58,7 +58,7 @@ lib: {
       description = "A list of single keystroke key bindings to launch common apps.";
       default = [
         "SUPER, return, exec, $terminal"
-        "SUPER, backspace, exec, sysact"
+        "SUPER, backspace, exec, ~/.local/bin/sysact"
         "SUPER, slash, exec, $passwordManager"
         "SUPER, D, exec, tofi-run | xargs hyprctl dispatch exec --"
         "SUPER, E, exec, thunderbird"
