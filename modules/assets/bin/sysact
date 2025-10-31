@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # Define the options
-options=" Lock\n󰩈 Logout\n󰒲 Sleep\n󱣻 Hibernate\n Reboot\n⏻ Shutdown"
+options=" Lock\n󰒲 Sleep\n󱣻 Hibernate\n Reboot\n⏻ Shutdown"
 
 # Use Tofi to select one (fall back to wofi if tofi missing)
 if command -v tofi >/dev/null 2>&1; then
@@ -21,15 +21,15 @@ fi
 [ -z "${choice:-}" ] && exit 0
 
 case "$choice" in
-"󰩈 Logout")
-  # Hyprland exit
-  if command -v hyprctl >/dev/null 2>&1; then
-    hyprctl dispatch exit
-  else
-    echo "hyprctl not found" >&2
-    exit 1
-  fi
-  ;;
+#"󰩈 Logout")
+#  # Hyprland exit
+#  if command -v hyprctl >/dev/null 2>&1; then
+#    hyprctl dispatch exit
+#  else
+#    echo "hyprctl not found" >&2
+#    exit 1
+#  fi
+#  ;;
 " Lock")
   if command -v hyprlock >/dev/null 2>&1; then
     hyprctl dispatch exec "hyprlock" || hyprlock &
