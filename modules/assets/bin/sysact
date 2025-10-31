@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+# sysact - simple power menu for Hyprland/tofi
+# Uses tofi for selection and systemctl/hyprctl for actions.
+
+set -euo pipefail
+
+# Define the options
+options=" Lock\n󰩈 Logout\n󰒲 Sleep\n󱣻 Hibernate\n Reboot\n⏻ Shutdown"
+
+# Use Tofi to select one (fall back to wofi if tofi missing)
+if command -v tofi >/dev/null 2>&1; then
+  choice=$(printf "%b" "$options" | tofi)
+elif command -v wofi >/dev/null 2>&1; then
+  choice=$(printf "%b" "$options" | wofi -dmenu -i -p "Power" -O alphabetical)
+else
+  echo "No tofi/wofi found in PATH" >&2
+  exit 1
+fi
+
+# If user cancelled, exit quietly
+[ -z "${choice:-}" ] && exit 0
+
+case "$choice" in
+"󰩈 Logout")
+  # Hyprland exit
+  if command -v hyprctl >/dev/null 2>&1; then
+    hyprctl dispatch exit
+  else
+    echo "hyprctl not found" >&2
+    exit 1
+  fi
+  ;;
+" Lock")
+  if command -v hyprlock >/dev/null 2>&1; then
+    hyprctl dispatch exec "hyprlock" || hyprlock &
+  else
+    echo "hyprlock not found" >&2
+    exit 1
+  fi
+  ;;
+"󰒲 Sleep")
+  /run/current-system/sw/bin/systemctl suspend
+  ;;
+"󱣻 Hibernate")
+  /run/current-system/sw/bin/systemctl hibernate
+  ;;
+" Reboot")
+  /run/current-system/sw/bin/systemctl reboot
+  ;;
+"⏻ Shutdown")
+  /run/current-system/sw/bin/systemctl poweroff
+  ;;
+*)
+  echo "No valid option selected." >&2
+  exit 1
+  ;;
+esac
+
+echo "$choice initiated."
+
+# TODO fontconfig issue and logout issue
