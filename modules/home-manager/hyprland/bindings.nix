@@ -15,7 +15,6 @@ in
       # "SUPER SHIFT CTRL, SPACE, exec, ~/.local/share/omarchy/bin/omarchy-theme-next"
 
       "SUPER, Q, killactive,"
-      "SUPER, Backspace, killactive,"
 
       # End active session
       "SUPER, ESCAPE, exec, hyprlock"

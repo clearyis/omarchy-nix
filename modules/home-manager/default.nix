@@ -42,6 +42,7 @@ in
     (import ./git.nix)
     (import ./mako.nix)
     (import ./starship.nix)
+    (import ./sysact.nix)
     (import ./tofi.nix)
     (import ./waybar.nix inputs)
     (import ./wofi.nix)
