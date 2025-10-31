@@ -6,3 +6,4 @@
     source = ../assets/bin/sysact;
     executable = true;
   };
+}
