@@ -51,9 +51,7 @@ in
           "bluetooth"
           "network"
           "wireplumber"
-	  "backlight"
-          "memory"
-          "cpu"
+      	  "backlight"
           "power-profiles-daemon"
           "temperature"
         ];
