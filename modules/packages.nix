@@ -45,6 +45,7 @@ let
       lazydocker
       powertop
       fastfetch
+      newsboat
 
       # GUIs
       vlc
