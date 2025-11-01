@@ -51,8 +51,8 @@ in
           "temperature"
       	  "backlight"
           "wireplumber"
-          "network"
           "bluetooth"
+          "network"
           "idle_inhibitor"
         ];
         "hyprland/workspaces" = {
