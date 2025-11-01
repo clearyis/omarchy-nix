@@ -115,6 +115,7 @@ in
         };
         battery = {
           interval = 5;
+          on-click = "ghostty --command='btop'";
           #format = "{capacity}% {icon} ";
           format = "{power:>1.0f}W↓ {capacity}%";
           #format-discharging = "{icon} {capacity}% ";
