@@ -194,7 +194,7 @@ in
 	          ""
 	          ""
 	        ];
-          format-muted = "󰝟  {volume}%";
+          format-muted = "  {volume}%";
           scroll-step = 5;
           tooltip-format = "Playing at {volume}%";
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
