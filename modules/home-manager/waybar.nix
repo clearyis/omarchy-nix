@@ -47,10 +47,10 @@ in
         ];
         modules-right = [
           "group/tray-expander"
-          "power-profiles-daemon"
-          "temperature"
           "wireplumber"
       	  "backlight"
+          "power-profiles-daemon"
+          "temperature"
           "network"
           "bluetooth"
           "idle_inhibitor"
@@ -194,7 +194,7 @@ in
 	          ""
 	          ""
 	        ];
-          format-muted = "  {volume}%";
+          format-muted = "  ";
           scroll-step = 5;
           tooltip-format = "Playing at {volume}%";
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
