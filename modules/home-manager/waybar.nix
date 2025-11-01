@@ -161,7 +161,7 @@ in
         temperature = {
           hwmon-path = "/sys/class/hwmon/hwmon7/temp1_input";
           critical-threshold = 95;
-          format = "{icon}  ";
+          format = "{temperatureC}°C  ";
           format-icons = [
 	    ""
 	    ""
@@ -188,7 +188,7 @@ in
         };
         wireplumber = {
           # Changed from "pulseaudio"
-          format = " {icon} ";
+          format = " {icon}{percent}% ";
 	  format-icons = [
 	     ""
 	     ""
@@ -203,7 +203,7 @@ in
         };
 	backlight = {
 	  device = "intel_backlight";
-	  format = "{icon}   ";
+	  format = "{icon}{percent}%   ";
 	  on-click = "hyprsunset -t 4500";
 	  on-click-right = "pkill hyprsunset";
 	  tooltip-format = "{percent}%";
