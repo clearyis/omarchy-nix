@@ -47,10 +47,10 @@ in
         ];
         modules-right = [
           "group/tray-expander"
-          "wireplumber"
-      	  "backlight"
           "power-profiles-daemon"
           "temperature"
+      	  "backlight"
+          "wireplumber"
           "network"
           "bluetooth"
           "idle_inhibitor"
