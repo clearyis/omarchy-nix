@@ -194,11 +194,11 @@ in
 	          ""
 	          ""
 	        ];
-          format-muted = "󰝟";
+          format-muted = "󰝟  {volume}%";
           scroll-step = 5;
-          on-click = "pavucontrol";
           tooltip-format = "Playing at {volume}%";
-          on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; # Updated command
+          on-click-right = "pavucontrol";
           max-volume = 150; # Optional: allow volume over 100%
         };
 	backlight = {
