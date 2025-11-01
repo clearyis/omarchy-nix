@@ -47,13 +47,13 @@ in
         ];
         modules-right = [
           "group/tray-expander"
-          "idle_inhibitor"
-          "bluetooth"
-          "network"
-          "wireplumber"
-      	  "backlight"
           "power-profiles-daemon"
           "temperature"
+          "wireplumber"
+      	  "backlight"
+          "network"
+          "bluetooth"
+          "idle_inhibitor"
         ];
         "hyprland/workspaces" = {
           on-click = "activate";
@@ -102,8 +102,8 @@ in
             "󰤥"
             "󰤨"
           ];
-          format = "{icon}";
-          format-wifi = "{icon}";
+          format = "{icon} ";
+          format-wifi = "{icon} ";
           format-ethernet = "󰀂";
           format-disconnected = "󰖪";
           tooltip-format-wifi = "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}";
@@ -188,12 +188,12 @@ in
         };
         wireplumber = {
           # Changed from "pulseaudio"
-          format = " {icon}{percent}% ";
-	  format-icons = [
-	     ""
-	     ""
-	     ""
-	   ];
+          format = "{icon}  {volume}%";
+	        format-icons = [
+	          ""
+	          ""
+	          ""
+	        ];
           format-muted = "󰝟";
           scroll-step = 5;
           on-click = "pavucontrol";
@@ -203,7 +203,7 @@ in
         };
 	backlight = {
 	  device = "intel_backlight";
-	  format = "{icon}{percent}%   ";
+	  format = "{icon}  {percent}%  ";
 	  on-click = "hyprsunset -t 4500";
 	  on-click-right = "pkill hyprsunset";
 	  tooltip-format = "{percent}%";
@@ -233,7 +233,7 @@ in
           spacing = 17;
         };
         power-profiles-daemon = {
-          format = "{icon} ";
+          format = "{icon}";
           tooltip-format = "Power profile: {profile}";
           tooltip = true;
           format-icons = {
