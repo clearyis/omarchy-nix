@@ -51,7 +51,6 @@ let
       vlc
 
       # Development tools
-      github-desktop
       gh
 
       # Containers
