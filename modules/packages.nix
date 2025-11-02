@@ -53,6 +53,7 @@ let
 
       # Development tools
       gh
+      vscode
 
       # Containers
       docker-compose
