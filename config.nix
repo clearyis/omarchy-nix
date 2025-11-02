@@ -60,6 +60,7 @@ lib: {
         "SUPER, return, exec, $terminal"
         "SUPER, backspace, exec, ~/.local/bin/sysact"
         "SUPER, slash, exec, $passwordManager"
+        "SUPER, C, sendshortcut, CTRL, Insert"
         "SUPER, D, exec, tofi-run | xargs hyprctl dispatch exec --"
         "SUPER, E, exec, thunderbird"
         "SUPER, M, exec, $music"
@@ -68,6 +69,8 @@ lib: {
         "SUPER, R, exec, $fileManager"
         "SUPER SHIFT, R, exec, $terminal -e btop"
         "SUPER, S, exec, $messenger"
+        "SUPER, V, sendshortcut, SHIFT, Insert"
+        "SUPER, X, sendshortcut, CTRL, X"
         "SUPER, W, exec, $browser"
       ];
     };
