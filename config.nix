@@ -63,7 +63,7 @@ lib: {
         "SUPER, D, exec, tofi-run | xargs hyprctl dispatch exec --"
         "SUPER, E, exec, thunderbird"
         "SUPER, M, exec, $music"
-        "SUPER, N, exec, $terminal -e nvim +VimwikiIndex"
+        "SUPER, N, exec, terminal -e nvim +VimwikiIndex"
         "SUPER SHIFT, N, exec, $terminal -e newsboat"
         "SUPER, R, exec, $fileManager"
         "SUPER SHIFT, R, exec, $terminal -e btop"
