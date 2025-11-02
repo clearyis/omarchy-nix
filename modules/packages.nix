@@ -34,6 +34,8 @@ let
     unzip
     wget
     gnumake
+    wlr-randr
+    wlr-brightness
   ];
 
   # Discretionary packages - can be excluded by user
