@@ -5,23 +5,22 @@
 xdg.configFile."tofi/config".text = ''
 anchor = top
 width = 100%
-height = 26
-horizontal = true
+height = 100%
 font-size = 10
 hint-font = false
 ascii-input = true
 prompt-text = "   "
-font = ~/.local/share/fonts/ComicCodeLigaturesNerdFont-Regular.otf 
+font = ~/.local/share/fonts/ComicCodeLigaturesNerdFont-Regular.otf
 outline-width = 0
 border-width = 0
-background-color = #202020
+background-color = rgba(0, 0, 0, 0.3) 
 selection-color = #bf3626
 min-input-width = 120
-result-spacing = 15
-padding-top = 0
-padding-bottom = 0
-padding-left = 0
-padding-right = 0
+result-spacing = 25
+padding-top = 35%
+padding-bottom = 35% 
+padding-left = 35%
+padding-right = 35%
 '';
 
 }
