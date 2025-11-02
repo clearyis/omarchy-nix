@@ -5,7 +5,7 @@
 xdg.configFile."tofi/config".text = ''
 anchor = top
 width = 100%
-height = 26
+height = 28
 horizontal = true
 font-size = 10
 hint-font = false
